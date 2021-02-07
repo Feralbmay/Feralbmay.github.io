@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Camera collisions - SINN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="SINN.html">SINN</a>
+								<ul>
+									<li><a href="Main_Mech.html">Main Mechanic</a></li>
+									<li><a href="Ilumination.html">Ilumination and Godrays</a></li>
+									<li><a href="Camera_col.html">Camera collisions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Camera collisions</h2>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/Camera_Col.mp4" type="video/mp4" /></video>
+								From the start, we were sure that the  camera could be a problem so we look for some information online. After some reserach, we found an <a href="https://www.gamasutra.com/blogs/EricUndersander/20131001/201382/Accurate_Collision_Zoom_for_Cameras.php" target="_blank">article</a> on Gamasutra that explained how to handle camera collisions.</p>
+								<p>Using the code and ideas of the article as base, I programmed on C++ the collision system. It consisted on throwing 4 raycast from the near plane vertexes, using the front vector of the camera as direction, and moving the camera to the resulting maximun distance. </p>
+								<br>
+								
+							</section>
+							<hr>
+							<ul class="actions special">
+								<li>
+									<a href="https://sleeplay-zombies.itch.io/sinn" class="button large" target="_blank">Itch.io website</a>
+								</li>
+							</ul>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/fernando-albillos-mayol-2b3a15169/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<!--<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
+						<li><a href="mailto: fernandoalbillos@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Fernando Albillos Mayol Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

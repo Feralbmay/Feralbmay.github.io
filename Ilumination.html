@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ilumination and Godrays - SINN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="SINN.html">SINN</a>
+								<ul>
+									<li><a href="Main_Mech.html">Main Mechanic</a></li>
+									<li><a href="Ilumination.html">Ilumination and Godrays</a></li>
+									<li><a href="Camera_col.html">Camera collisions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Ilumination and Godrays</h2>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<h3>Ilumination: Cel Shading</h3>
+								<p><span class="image right" id = "no-background"><img src="images/Cel_Shading.png" alt="" /></span>
+								Due to the importance of the light on the game, we decided to use cel shading instead of a more real type of lightning.</p>
+								<p>Some of our inspirations for the lighhtning system were: <a href="https://www.youtube.com/watch?v=mnxs6CR6Zrk&ab_channel=Michael%60Jasper%60Ashworth" target="_blank">The legend of Zelda: Wind Waker</a>, Rime and  <a href="https://www.gdcvault.com/play/1022031/GuiltyGearXrd-s-Art-Style-The" target="_blank">Guilty Gear Xrd's</a> . </p>
+								<p>The implementetion of the Cel Shading on the game is rather basic. The shader divides the incidation of the light in 3 ranges, depending on the normal of the pixel compared to the light direction. To smooth the transitions between ranges, a smoothstep function is apllied in order to accomplished a gradient between the ranges. </p>
+
+								<hr>
+
+								<h3>God rays</h3>
+								<p>
+									<video autoplay="autoplay" loop muted class="image left"><source src="images/Godrays.mp4" type="video/mp4" /></video>
+									For the game to work, we needed the player to understand where the lights were. The first thing that crossed our minds was to give volume to the lights but we had a problem, we couldn't make a mesh to contain a ray of light, because our mechanic is dependent on the shadows. To sum it up, we needed a dynamic system to show the volume of a light.</p>
+								<p>After some investigation, we found that the technique that fits our needs were the god rays. To put it simple, God rays are a 3D effect that takes samples of the shadow map to add fog to different distances of the light beam. This gives an effect of volume to the lights.<br>
+								The code of the Godrays was made using HSLS. The code is based on this <a href="https://www.shadertoy.com/view/WsfBDf" target="_blank">shader</a>, that uses noise to reduce the artifacts of te effect.
+								</p>
+								<hr>
+							</section>
+							<ul class="actions special">
+								<li>
+									<a href="https://sleeplay-zombies.itch.io/sinn" class="button large" target="_blank">Itch.io website</a>
+								</li>
+							</ul>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/fernando-albillos-mayol-2b3a15169/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<!--<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
+						<li><a href="mailto: fernandoalbillos@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Fernando Albillos Mayol Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

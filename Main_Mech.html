@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Main Mechanic - SINN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="SINN.html">SINN</a>
+								<ul>
+									<li><a href="Main_Mech.html">Main Mechanic</a></li>
+									<li><a href="Ilumination.html">Ilumination and Godrays</a></li>
+									<li><a href="Camera_col.html">Camera collisions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Main Mechanic</h2>
+							<p>How to make shadows tangible</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<p><span class="image right" ><img src="images/Project_Sphere.png" alt="" />Projected_Sphere</span>During the planing part of the project, the team started to think of ways to translate the main mechanic of the game into code. Once I had a few ideas of how to code it, I asked my teacher, Juan, what he thinked about them. Of the ideas I had, one of them was the clear way to go for the professor.</p>
+								<p>To put it simple, the idea consists on making 3D volumes of the shadows when projected. To accomplished it, the vertexes of the object needed to be projected on the zfar of the light. The volume is made of the projected vertexes and the origin of the light.</p>
+								<p>On the right, there is an example of an sphere being projected by the code. Due to the basic physX object lack of vertexes, the projectable vertexes need to be calculated.</p>
+								<hr>
+
+								<h3>Pictograms</h3>
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/Pictogramas.mp4" type="video/mp4" />One of the ideas to complement the shadows was to have pictograms whose behaviour while projected was the same as the shadows. This element allowed us to make more interesting design choices for the game.</p>
+								<p>The visual and logic part of the pictograms is quite diferent. The visual part is basicaly a decal with a texture of the pictogram. The logic part is basically a few points in front of the wall where the pictogram is projected, so the algorithm can directly project those and create the collision volume.</p>
+								<p> Due to the nature of the code, to move a shadow or pictogram the game needs to project the vertexes again, because the projected volume will change. So, to save some performance issues, the code only recreates the colliders when needed.</p>
+								<hr>
+								<h3>Movable boxes when projected</h3> 
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/Shadow_Boxes.mp4" type="video/mp4" />To move a box while projected aplying the algorithm didn't make sense. In our game, the behaviour of the boxes is that, when picked by the player, the movement of the box is dependent on the movement of the player. Basically, the game converts the box to a controller and moves it exacly like the player. Because the box and the player are stuck, it is not necesary to coordinate the collisions between the two.</p>
+								<p>However, when projected, that changes. To move the shadow of a box, first we need to calculate how the box movement varies from that of the player and, afterwards, check if the player or box collides to move the other accordingly. The rest of the logic is exacly the same as the logic of a normal movable box.</p>
+								<p> When picked, the code eliminates the shadow volume and transform the original collider into a controllable box. When released, the movable object is projected using the projection algorithm.</p>
+								<hr>
+							</section>
+							<ul class="actions special">
+								<li>
+									<a href="https://sleeplay-zombies.itch.io/sinn" class="button large" target="_blank">Itch.io website</a>
+								</li>
+							</ul>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/fernando-albillos-mayol-2b3a15169/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<!--<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
+						<li><a href="mailto: fernandoalbillos@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Fernando Albillos Mayol Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
