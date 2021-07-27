@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Debuging - SINN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="SINN.html">SINN</a>
+								<ul>
+									<li><a href="Main_Mech.html">Main Mechanic</a></li>
+									<li><a href="Ilumination.html">Ilumination and Godrays</a></li>
+									<li><a href="Camera_col.html">Camera collisions</a></li>
+									<li><a href="Debuging.html">Debuging and Optimization</a></li>
+									<li><a href="Physics.html">Physics</a></li>
+									<li><a href="Tools.html">Tools</a></li>
+									<li><a href="Rendering_Pipeline.html">Rendering Pipeline</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Debuging and Optimization</h2>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<p>I had a major role on the profiling and debugging of the game. I frequently tested it to find bugs and report/solve them.</p>
+								<p>Additionally, when I had a break from coding, I check for performance issues while testing and I registered anomalies on the CPU times. Furthermore, I tend to inform to the programmer of that part and search for better alternatives to the ones used.</p>
+								<p>Some of the Optimizations I implemented to lessen the CPU load or avoid loading times were:</p>
+								<hr>
+
+								<h3>Particle System on GPU</h3>
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/Particle_System.mp4" type="video/mp4" /> </video> 
+								At the end of the project, while doing profiling, I took notice that the particle system was taking more than 20% of the CPU time. For that reason, I decided to look at the system, to port it to the GPU. </p>
+								<p>To acomplish my goal, I grouped the emitters of the same particles in a buffer and use two buffers to add the particles and checked when they die. Also, I replicated the behaviour of the system on a compute shader.  The biggest problem for the system was to find a pseudo-random algorithm for the GPU.</p>
+								<hr>
+								<h3>GPU Culling</h3> 
+								<p>
+								At the start of the project, we had a ton of static objects that were managed by the CPU. Of course, the culling of those objects was handled by it, which increased it's load immensely.</p>
+								<p>After some consideration, I decided to move the static objects from CPU to GPU. Due to the nature of the operations, a hardware designed to perform the same operation multiple times at once is ideal for the task.</p>
+								<hr>
+								<h3>Multithreaded loading System</h3>
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/loading.mp4" type="video/mp4" /> </video> 
+								At some point in the project, we toyed with the idea of making the game longer and, at that time, we had performance issues. After some thought, we decided to implement and test a multithreaded loading system, that used another thread to load parts of the map, allowing the game to continue running while loading.</p>
+								<p>Later on the project, we scrap the idea of making the map bigger and, instead, polish the design as much as we could, which left the system unused.</p>
+								<hr>
+							</section>
+							<ul class="actions special">
+								<li>
+									<a href="https://sleeplay-zombies.itch.io/sinn" class="button large" target="_blank">Itch.io website</a>
+								</li>
+							</ul>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/fernando-albillos-mayol-2b3a15169/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Feralbmay/Sample-Code" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto: fernandoalbillos@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Fernando Albillos Mayol Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

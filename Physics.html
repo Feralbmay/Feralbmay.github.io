@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Physics - SINN</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Portfolio</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="SINN.html">SINN</a>
+								<ul>
+									<li><a href="Main_Mech.html">Main Mechanic</a></li>
+									<li><a href="Ilumination.html">Ilumination and Godrays</a></li>
+									<li><a href="Camera_col.html">Camera collisions</a></li>
+									<li><a href="Debuging.html">Debuging and Optimization</a></li>
+									<li><a href="Physics.html">Physics</a></li>
+									<li><a href="Tools.html">Tools</a></li>
+									<li><a href="Rendering_Pipeline.html">Rendering Pipeline</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Physics</h2>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<p>At the start of the project, as I was the person in charge of the main mechanic, I modified the physics system, using physX, of the game to accommodate our needs.</p>
+								<p>That left me to understand better than the rest of the team how to interact with the library and how to make it work. For that reason, I ended up being the one in charge of the physics of the game.</p>
+								<hr>
+
+								<h3>Player attachment to moving objects</h3>
+								<p><video autoplay="autoplay" loop muted class="image left"><source src="images/Attached_Movement.mp4" type="video/mp4" /> </video> 
+								For the moving objects, we need to transfer its movement to the player. In the case of the shadows/pictograms, the movement needed to be scaled. Of course, in the case of rotation, the player needs to move with it. </p>
+								<p>To accomplished it, the game needs to notify to the physics engine how much the player is moving to be attached to that object. For that reason, the game notifies to the player when it interacts with an object and how much it's moving frame by frame, so it can be added to the movement.</p>
+								<hr>
+							</section>
+							<ul class="actions special">
+								<li>
+									<a href="https://sleeplay-zombies.itch.io/sinn" class="button large" target="_blank">Itch.io website</a>
+								</li>
+							</ul>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/fernando-albillos-mayol-2b3a15169/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Feralbmay/Sample-Code" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto: fernandoalbillos@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Fernando Albillos Mayol Portfolio</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
